@@ -23,25 +23,14 @@ def testListDivide():
     '''
     Tests function listDivide
     '''
-    if listDivide([1, 2, 3, 4, 5]) == 2:
-        pass
-    else:
-        raise ListDivideException
-    if listDivide([2, 4, 6, 8, 10]) == 5:
-        pass
-    else:
-        raise ListDivideException
-    if listDivide([30, 54, 63, 98, 10], divide=10) == 2:
-        pass
-    else:
-        raise ListDivideException
-    if listDivide([]) == 0:
-        pass
-    else:
-        raise ListDivideException
-    if listDivide([1, 2, 3, 4, 5], divide=1) == 5:
-        pass
-    else:
+    try:
+        assert listDivide([1, 2, 3, 4, 5]) == 2, '1st'
+        assert listDivide([2, 4, 6, 8, 10]) == 5, '2nd'
+        assert listDivide([30, 54, 63, 98, 10], divide=10) == 2, '3rd'
+        assert listDivide([]) == 0, '4th'
+        assert listDivide([1, 2, 3, 4, 5], divide=1) == 5, '5th'
+        # assert listDivide([1, 2, 3, 4, 5],0) == 2, 'test'
+    except:
         raise ListDivideException
 
 if __name__ == "__main__":
